@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Technology Example</title>
+
+    <!-- CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML -->
+    <h1>Welcome to Web Technology</h1>
+    <p id="message">Click the button to see magic ✨</p>
+    <button onclick="showMessage()">Click Me</button>
+
+    <!-- JavaScript -->
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerHTML =
+                "HTML + CSS + JavaScript are working together!";
+        }
+    </script>
+
+</body>
+</html>
