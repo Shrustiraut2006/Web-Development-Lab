@@ -1,0 +1,73 @@
+xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="result.xsl"?>
+
+<students>
+
+    <student>
+        <name>Shrusti</name>
+        <marks>90</marks>
+    </student>
+
+    <student>
+        <name>Rahul</name>
+        <marks>45</marks>
+    </student>
+
+</students>
+```
+
+## result.xsl
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+<html>
+<head>
+    <title>Student Result</title>
+</head>
+<body>
+
+<h2 align="center">Student Result Status</h2>
+
+<table border="1" align="center" cellpadding="10">
+    <tr bgcolor="#0077b6" style="color:white;">
+        <th>Name</th>
+        <th>Marks</th>
+        <th>Status</th>
+    </tr>
+
+    <xsl:for-each select="students/student">
+        <tr>
+            <td><xsl:value-of select="name"/></td>
+            <td><xsl:value-of select="marks"/></td>
+
+            <td>
+                <xsl:choose>
+
+                    <xsl:when test="marks &gt;= 50">
+                        PASS
+                    </xsl:when>
+
+                    <xsl:otherwise>
+                        FAIL
+                    </xsl:otherwise>
+
+                </xsl:choose>
+            </td>
+
+        </tr>
+    </xsl:for-each>
+</table>
+
+</body>
+</html>
+</xsl:template>
+
+</xsl:stylesheet>
+
