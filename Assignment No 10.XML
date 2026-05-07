@@ -1,0 +1,20 @@
+xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<college>
+
+    <student>
+        <rollno>101</rollno>
+        <name>Shrusti</name>
+        <course>BCA</course>
+        <city>Kolhapur</city>
+    </student>
+
+    <student>
+        <rollno>102</rollno>
+        <name>Rahul</name>
+        <course>BSc IT</course>
+        <city>Pune</city>
+    </student>
+
+</college>
